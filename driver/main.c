@@ -1026,7 +1026,7 @@ PetscErrorCode SetRasterData(RasterDataset *data, PetscReal cur_time, PetscInt n
 
   for (PetscInt icell = 0; icell < ncells; icell++) {
     PetscInt idx = data->data2mesh_idx[icell];
-    rain[icell]  = data->data_ptr[idx + offset] * mm_per_hr_2_m_per_sec;
+    rain[icell]  = data->data_ptr[idx + offset];// * mm_per_hr_2_m_per_sec;
   }
 
   PetscFunctionReturn(PETSC_SUCCESS);
